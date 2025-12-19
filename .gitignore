@@ -1,0 +1,12 @@
+# Environments
+bankenv/
+venv/
+env/
+
+# Python compiled files (The junk Python creates)
+__pycache__/
+*.pyc
+
+# IDE settings
+.vscode/
+.idea/
