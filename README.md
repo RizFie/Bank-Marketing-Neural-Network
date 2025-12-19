@@ -49,10 +49,10 @@ We addressed the class imbalance (89% 'No' vs 11% 'Yes') not by oversampling, bu
 * *Critique:* The model was too conservative. It missed 80% of potential subscribers to maintain high accuracy.
 
 ### The "Optimized" Approach (Threshold 0.15) - **FINAL MODEL**
-We adjusted the sensitivity to catch faint signals from potential customers.
-* **Accuracy:** ~86% (Slight trade-off)
-* **Recall (Customers Found):** **~63%**
-* **Impact:** By sacrificing 4% accuracy, we **tripled** the number of potential leads identified for the bank.
+We adjusted the sensitivity to catch faint signals from potential customers using custom threshold optimizer.
+* **Accuracy:** ~87% (Slight trade-off)
+* **Recall (Customers Found):** **~59%**
+* **Impact:** By sacrificing 3% accuracy, we **tripled** the number of potential leads identified for the bank.
 
 ---
 
