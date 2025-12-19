@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Project Overview vs. Weka (Waikato Environment for Knowledge Analysis)
+## 1) Project Overview vs. Weka (Waikato Environment for Knowledge Analysis)
 For this assignment, our group chose to implement a **Deep Neural Network (DNN)** using Python and PyTorch, rather than using the standard Weka GUI tools.
 
 **Why we chose this approach:**
@@ -15,7 +15,7 @@ For this assignment, our group chose to implement a **Deep Neural Network (DNN)*
 
 ---
 
-## 🛠️ The Pipeline
+## 2) The Pipeline
 
 ### 1. Data Cleaning
 * **Leakage Removal:** Dropped the `duration` column. This variable is only known *after* a call is made, so including it would cause data leakage and fake 100% accuracy.
@@ -39,7 +39,7 @@ We built a Feed-Forward Network (`BankModel`) optimized for binary classificatio
 
 ---
 
-## 📊 Results & Performance
+## 3) Results & Performance
 
 We addressed the class imbalance (89% 'No' vs 11% 'Yes') not by oversampling, but by tuning the **Decision Threshold**.
 
@@ -56,7 +56,7 @@ We adjusted the sensitivity to catch faint signals from potential customers.
 
 ---
 
-## 💻 How to Run This Project
+## 4) How to Run This Project
 
 ### 1. Setup Environment
 This project requires a GPU-enabled PyTorch environment (optional but recommended).
@@ -70,6 +70,7 @@ pip install torch torchvision --index-url [https://download.pytorch.org/whl/cu11
 ```
 
 Dataset Information
+
 This project utilizes a modified version of the Bank Marketing Data Set sourced from the UCI Machine Learning Repository.
 
 Original Source: https://archive.ics.uci.edu/dataset/222/bank+marketing
