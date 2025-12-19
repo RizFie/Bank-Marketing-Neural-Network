@@ -18,7 +18,7 @@ For this assignment, our group chose to implement a **Deep Neural Network (DNN)*
 ## 2) The Pipeline
 
 ### 1. Data Cleaning
-* **Leakage Removal:** Dropped the `duration` column. This variable is only known *after* a call is made, so including it would cause data leakage and fake 100% accuracy.
+* **Leakage Removal:** Dropped the `duration` column. This variable is only known *after* a call is made, so including it would cause data leakage and fake 100% accuracy. Also dropped 2 other columns.
 * **Deduplication:** Removed duplicate customer records.
 * **Imputation:**
     * Categorical features (e.g., job, education) filled with **"unknown"**.
@@ -28,7 +28,7 @@ For this assignment, our group chose to implement a **Deep Neural Network (DNN)*
 We used a `ColumnTransformer` to automate:
 * **StandardScaler:** Normalizing age and economic indicators.
 * **One-Hot Encoding:** Converting categorical text into binary vectors.
-* **Result:** Input dimensionality expanded from 19 raw features to **62 input neurons**.
+* **Result:** Input dimensionality expanded from 17 raw features to **60 input neurons**.
 
 ### 3. Neural Network Architecture
 We built a Feed-Forward Network (`BankModel`) optimized for binary classification:
