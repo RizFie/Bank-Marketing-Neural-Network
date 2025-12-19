@@ -32,9 +32,9 @@ We used a `ColumnTransformer` to automate:
 
 ### 3. Neural Network Architecture
 We built a Feed-Forward Network (`BankModel`) optimized for binary classification:
-* **Input Layer:** 62 Neurons
-* **Hidden Layer 1:** 32 Neurons + ReLU + **Dropout (0.3)** (Prevents Overfitting)
-* **Hidden Layer 2:** 16 Neurons + ReLU + **Dropout (0.3)**
+* **Input Layer:** 60 Neurons
+* **Hidden Layer 1:** 30 Neurons + ReLU + **Dropout (0.3)** (Prevents Overfitting)
+* **Hidden Layer 2:** 15 Neurons + ReLU + **Dropout (0.3)**
 * **Output Layer:** 1 Neuron (Sigmoid Activation)
 
 ---
@@ -50,9 +50,9 @@ We addressed the class imbalance (89% 'No' vs 11% 'Yes') not by oversampling, bu
 
 ### The "Optimized" Approach (Threshold 0.15) - **FINAL MODEL**
 We adjusted the sensitivity to catch faint signals from potential customers.
-* **Accuracy:** ~87% (Slight trade-off)
-* **Recall (Customers Found):** **~61%**
-* **Impact:** By sacrificing 3% accuracy, we **tripled** the number of potential leads identified for the bank.
+* **Accuracy:** ~86% (Slight trade-off)
+* **Recall (Customers Found):** **~63%**
+* **Impact:** By sacrificing 4% accuracy, we **tripled** the number of potential leads identified for the bank.
 
 ---
 
@@ -64,9 +64,13 @@ This project requires a GPU-enabled PyTorch environment (optional but recommende
 # Install dependencies
 pip install -r requirements.txt
 ```
-then
+then run (for CUDA GPU)
 ```bash
 pip install torch torchvision --index-url [https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
+```
+else
+```bash
+pip install torch
 ```
 
 Dataset Information
